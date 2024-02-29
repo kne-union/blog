@@ -21,12 +21,9 @@ jobs:
       - name: manifest 🏗️
         run: npx @kne/md-index
 
-      - name: Copy
-        run: cp -r ./* ./build
-
       - name: Deploy to GH Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./
           exclude_assets: '.github,.gitignore'
