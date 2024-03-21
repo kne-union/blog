@@ -13,5 +13,3 @@ jobs:
     if: github.event.pull_request.merged == true
     uses: kne-union/actions/.github/workflows/publish-content-workflow.yml@master
     secrets: inherit
-    with:
-      name: blog
